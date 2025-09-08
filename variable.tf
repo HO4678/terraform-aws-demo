@@ -1,15 +1,13 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
 variable "aws_region" {
-  description = "AWS region to launch servers."
+  description = "AWS region to deploy into"
+  type        = string
   default     = "us-east-1"
 }
 
-# Ubuntu Bionic 18.04 LTS (x64)
 variable "aws_amis" {
+  description = "Map of region to AMI"
+  type        = map(string)
   default = {
-    us-east-1 = "ami-04e601abe3e1a910f" # Ubuntu 18.04 LTS in Frankfurt
-
+    us-east-1 = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI (HVM), SSD Volume Type
   }
 }
