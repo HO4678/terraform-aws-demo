@@ -3,7 +3,7 @@
 
 variable "aws_region" {
   description = "AWS region to launch servers."
-  default     = "eu-central-1"
+  default     = "us-east-1"
 }
 
 # Ubuntu Bionic 18.04 LTS (x64)
